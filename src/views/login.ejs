@@ -35,7 +35,7 @@
           <h4>Faça Login</h4>
           <p>Se já tiver conta, faça login abaixo:</p>
           <form action="/login/login" method="POST">
-            <div type="hidden" name="_csrf" value=<%= csrfToken %>></div>
+            <input type="hidden" name="_csrf" value=<%= csrfToken %>>
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Seu E-mail</label>
               <input type="email" name ="email"class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
