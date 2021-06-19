@@ -2,7 +2,12 @@ require('dotenv').config(); //chama o dotenv (dep de segurança para ajudar a pr
 const express = require('express'); // chama o express
 const app = express(); // express
 const mongoose = require('mongoose');
-mongoose.connect(process.env.CONNECTIONSTRING, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.CONNECTIONSTRING,
+  {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useFindAndModify: false
+  })
   .then(() => {
     app.emit('pronto');
   })
